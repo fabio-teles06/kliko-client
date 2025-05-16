@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+    --font-sans: "Public Sans", sans-serif;
+
+    --breakpont-3xl: 1920px;
+}

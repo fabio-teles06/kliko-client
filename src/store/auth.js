@@ -11,13 +11,13 @@ export const useAuthStore = defineStore('auth', {
     },
     actions: {
         async login(email, password) {
-            const res = await axios.post(`${process.env.VUE_APP_API_URL}/auth/login`, { email, password });
+            const res = await axios.post(`${import.meta.env.API_URL}/auth/login`, { email, password });
             this.token = res.data.token;
             localStorage.setItem('token', this.token);
             //this.user
         },
         async register(name, email, password) {
-            const res = await axios.post(`${process.env.VUE_APP_API_URL}/auth/register`, { name, email, password });
+            const res = await axios.post(`${import.meta.env.API_URL}/auth/register`, { name, email, password });
             this.token = res.data.token;
             localStorage.setItem('token', this.token);
             //this.user
