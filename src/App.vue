@@ -1,31 +1,31 @@
 <template>
   <div id="app" class="app-container">
-    <img src="./assets/logo.png" alt="Logo" class="logo" />
+    <!-- <img src="./assets/logo.png" alt="Logo" class="logo" />
     <RouterLink to="/">Inicio</RouterLink>
     <RouterLink to="/login" v-if="!isAuthenticated">Login</RouterLink>
     <RouterLink to="/register" v-if="!isAuthenticated">Registrar</RouterLink>
     <RouterLink to="/dashboard" v-if="isAuthenticated">Dashboard</RouterLink>
-    <button @click="logout" v-if="isAuthenticated">Logout</button>
+    <button @click="logout" v-if="isAuthenticated">Logout</button> -->
+    <NavBar />
     <RouterView />
-    <footer>
-      <p>Contato: <a href="mailto:fabio.teles06@outlook.com">fabio.teles06@outlook.com</a></p>
-    </footer>
   </div>
 </template>
 
 <script setup>
-import { useAuthStore } from '@/store/auth';
-import { computed } from 'vue';
-import { RouterView, useRouter } from 'vue-router';
+import NavBar from './components/NavBar.vue';
 
-const router = useRouter();
-const auth = useAuthStore();
-const isAuthenticated = computed(() => auth.isAuthenticated);
+// import { useAuthStore } from '@/store/auth';
+// import { computed } from 'vue';
+// import { RouterView, useRouter } from 'vue-router';
 
-const logout = () => {
-  auth.logout();
-  router.go('/login');
-};
+// const router = useRouter();
+// const auth = useAuthStore();
+// const isAuthenticated = computed(() => auth.isAuthenticated);
+
+// const logout = () => {
+//   auth.logout();
+//   router.go('/login');
+// };
 </script>
 
 <style>

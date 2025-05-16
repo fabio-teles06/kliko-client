@@ -3,15 +3,15 @@ import { useAuthStore } from './store/auth';
 
 
 import UrlShortener from './components/UrlShortener.vue';
-import UserLogin from './components/UserLogin.vue';
-import UserRegister from './components/UserRegister.vue';
 import DashboardView from './views/DashboardView.vue';
+import LoginView from './views/LoginView.vue';
+import RegisterView from './views/RegisterView.vue';
 
 
 const routes = [
     { path: '/', component: UrlShortener },
-    { path: '/login', component: UserLogin },
-    { path: '/register', component: UserRegister },
+    { path: '/login', component: LoginView },
+    { path: '/register', component: RegisterView },
     { path: '/dashboard', component: DashboardView, meta: { requiresAuth: true } }
 ]
 
